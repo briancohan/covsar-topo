@@ -1,0 +1,16 @@
+site_name: COVSAR Topo
+site_description: COVSAR Tools for working with SARTopo
+
+site_author: Brian Cohan
+repo_url: https://github.com/briancohan/covsar-topo
+
+theme:
+  name: material
+  locale: en
+  favicon: https://sartopo.com/icon.png?cfg=heatsource
+
+nav:
+  - Home: index.md
+  - Reference:
+    - Lines: lines.md
+    - Symbols: symbols.md

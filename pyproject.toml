@@ -1,0 +1,69 @@
+[tool.poetry]
+name = "covsar-topo"
+version = "0.1.0"
+description = ""
+authors = ["Brian Cohan <briancohan@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cartopy = "^0.23.0"
+geopy = "^2.4.1"
+numpy = "^2.1.0"
+pandas = "^2.2.2"
+python-dotenv = "^1.0.1"
+sartopo-python = "^2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+mkdocs = "^1.6.0"
+mkdocs-material = "^9.5.32"
+mypy = "^1.11.1"
+nbformat = "^5.10.4"
+pre-commit = "^3.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "A", # flake8-builtins
+    "ANN", # flake8-annotations
+    "B", # flake8-bugbear
+    "C", # Pylint-Convention
+    "COM", # flake8-commas
+    "E", # pycodestyle - Error
+    "F", # Pyflakes
+    "I", # isort
+    "N", # pep8-naming
+    "S", # flake8-bandit
+    "UP", # pyupgrade
+    "W", # pycodestyle - Warning
+]
+ignore = [
+    "ANN002", # Missing type annotation for *args
+    "ANN003", # Missing type annotation for **kwargs
+    "ANN101", # Missing type annotation for self in method
+    "ANN102", # Missing type annotation for cls in classmethod
+    "COM812", # missing-trailing-comma
+    "D105", # Missing docstring in magic method
+    "D107", # Missing docstring in __init__
+    "D203", # 1 blank line required before class docstring (conflicts with D211)
+    "D213", # Multi-line docstring symmary should start at the second line (conflicts with D212)
+    "D301", # Use r if any backslashes in a docstring
+    "E203", # Whitespace before ':'
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[[tool.mypy.overrides]]
+module = [
+    "sartopo-python",
+]
+ignore_missing_imports = true
