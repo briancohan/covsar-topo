@@ -1,6 +1,50 @@
 from enum import Enum
 
 
+class Terrain(Enum):
+    MOUNTAIN = "Mountain"
+    FLAT = "Flat"
+    URBAN = "Urban"
+    ALL = "All"
+
+
+class LPB(Enum):
+    # ABDUCTION = "Abduction"
+    # AIRCRAFT = "Aircraft"
+    ANGLER = "Angler"
+    ATV = "Atv"
+    AUTISTIC = "Autistic"
+    CAMPER = "Camper"
+    # CAVER = "Caver"
+    CHILD_1_3 = "Child 1-3"
+    CHILD_4_6 = "Child 4-6"
+    CHILD_7_9 = "Child 7-9"
+    CHILD_10_12 = "Child 10-12"
+    CHILD_13_15 = "Child 13-15"
+    # CLIMBER = "Climber"
+    DEMENTIA = "Dementia"
+    DESPONDENT = "Despondent"
+    GATHERER = "Gatherer"
+    HIKER = "Hiker"
+    HORSEBACK_RIDER = "Horseback Rider"
+    HUNTER = "Hunter"
+    MENTAL_ILLNESS = "Mental Illness"
+    MENTAL_RETARDATION = "Mental Retardation"
+    MOUNTAIN_BIKER = "Mountain Biker"
+    # OTHER = "Other"
+    RUNNER = "Runner"
+    SKIER_ALPINE = "Skier Alpine"
+    SKIER_NORDIC = "Skier Nordic"
+    SNOWBOARDER = "Snowboarder"
+    SNOWMOBILER = "Snowmobiler"
+    # SNOWSHOER = "Snowshoer"
+    SUBSTANCE_ABUSE = "Substance Abuse"
+    # URBAN_ENTRAPMENT = "Urban Entrapment"
+    VEHICLE = "Vehicle"
+    # WATER_RELATED = "Water Related"
+    # WORKER = "Worker"
+
+
 class Line(Enum):
     # Basic
     SOLID = "solid"
